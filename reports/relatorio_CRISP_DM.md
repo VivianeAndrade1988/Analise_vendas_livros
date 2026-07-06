@@ -132,7 +132,11 @@ df.nunique()
 
 ### 3.5 Consolidação de categorias de gênero
 
-A base trazia 4 categorias: `genre fiction` (759), `nonfiction` (160), `fiction` (54) e `children` (15).
+A base trazia 4 categorias: 
+`genre fiction` (759), 
+`nonfiction` (160),   
+`fiction` (54) e 
+`children` (15).
 
 ```python
 df['genre'] = df['genre'].apply(lambda genre: 'Ficção' if genre == "genre fiction" else genre)
@@ -152,8 +156,8 @@ plt.xlabel('Ano de Publicação'); plt.ylabel('Frequência')
 plt.title('Distribuição de Livros por Ano de Publicação')
 plt.show()
 ```
+![Distribuição por ano de publicação](../Images/01_distribuicao_ano_publicacao.png)
 
-![Distribuição por ano de publicação](../images/01_distribuicao_ano_publicacao.png)
 
 > 💡 Maior concentração de títulos entre o final do século XX e início dos anos 2000, com pico próximo a 2010-2012 — a base é majoritariamente composta por lançamentos recentes.
 
@@ -163,7 +167,7 @@ plt.show()
 df["genre"].value_counts().plot(kind="bar")
 ```
 
-![Distribuição por gênero](../images/02_distribuicao_por_genero.png)
+![Distribuição por gênero](../Images/02_distribuicao_por_genero.png)
 
 > 💡 Ficção é disparadamente o gênero mais representado. A base é enviesada para esse gênero.
 
@@ -182,7 +186,7 @@ sns.boxplot(x="genre", y="Book_ratings_count", data=df)
 plt.xlabel("Gênero")
 ```
 
-![Avaliações por gênero](../images/03_avaliacoes_por_genero_boxplot.png)
+![Avaliações por gênero](../Images/03_avaliacoes_por_genero_boxplot.png)
 
 > 💡 **Insights:**
 > - Ficção recebe o maior volume de avaliações.
@@ -196,7 +200,7 @@ sns.boxplot(x="genre", y="Book_average_rating", data=df)
 plt.xlabel("Gênero")
 ```
 
-![Nota média por gênero](../images/04_nota_media_por_genero_boxplot.png)
+![Nota média por gênero](../Images/04_nota_media_por_genero_boxplot.png)
 
 > 💡 **Insights:**
 > - Medianas de nota giram em torno de 4,0 em todos os gêneros.
@@ -213,7 +217,7 @@ plt.scatter(df["sale price"], df["units sold"])
 plt.xlabel("Sale price"); plt.ylabel("Units sold")
 ```
 
-![Preço vs vendas](../images/05_preco_vs_vendas.png)
+![Preço vs vendas](../Images/05_preco_vs_vendas.png)
 
 > 💡 **Insights:**
 > - Divisão bimodal clara: livros vendem muito pouco ou muito, com um vazio na faixa intermediária.
@@ -227,7 +231,7 @@ language_counts = df["language_code"].value_counts()
 plt.pie(language_counts, labels=language_counts.index)
 ```
 
-![Distribuição por idioma](../images/06_distribuicao_por_idioma_pizza.png)
+![Distribuição por idioma](../Images/06_distribuicao_por_idioma_pizza.png)
 
 > 💡 O inglês domina quase totalmente a base (`eng` + `en-US` já são a maioria). Outros idiomas têm participação residual.
 
@@ -270,7 +274,7 @@ df["Author_Rating"].value_counts()
 plt.scatter(df["Book_average_rating"], df["Book_ratings_count"])
 ```
 
-![Nota vs qtd avaliações](../images/07_nota_vs_qtd_avaliacoes.png)
+![Nota vs qtd avaliações](../Images/07_nota_vs_qtd_avaliacoes.png)
 
 > 💡 Sem tendência linear clara. Notas muito altas ou muito baixas tendem a acumular mais avaliações do que notas "medianas" — padrão típico de avaliações online.
 
@@ -280,7 +284,7 @@ plt.scatter(df["Book_average_rating"], df["Book_ratings_count"])
 plt.scatter(df["Book_average_rating"], df["units sold"])
 ```
 
-![Nota vs vendas](../images/08_nota_vs_unidades_vendidas.png)
+![Nota vs vendas](../Images/08_nota_vs_unidades_vendidas.png)
 
 > 💡 Sem relação clara entre nota e volume de vendas.
 
@@ -291,7 +295,7 @@ booleano = df["units sold"] < 10000
 plt.scatter(df[booleano]["Book_average_rating"], df[booleano]["units sold"])
 ```
 
-![Nota vs vendas (zoom)](../images/09_nota_vs_vendas_abaixo_10mil.png)
+![Nota vs vendas (zoom)](../Images/09_nota_vs_vendas_abaixo_10mil.png)
 
 > 💡 Mesmo isolando a maioria dos livros, a nota não é preditor confiável de volume vendido.
 
@@ -324,7 +328,7 @@ df[["Book_average_rating", "Book_ratings_count", "gross sales", "sale price"]].c
 sns.boxplot(x="Author_Rating", y="units sold", data=df)
 ```
 
-![Reputação vs vendas](../images/10_reputacao_autor_vs_vendas_boxplot.png)
+![Reputação vs vendas](../Images/10_reputacao_autor_vs_vendas_boxplot.png)
 
 > 💡 As caixas dos quatro grupos se sobrepõem consideravelmente, sem destaque visual de nenhum grupo.
 
@@ -334,7 +338,7 @@ sns.boxplot(x="Author_Rating", y="units sold", data=df)
 df.groupby("Publishing Year")["units sold"].sum().plot(kind="line", marker="o")
 ```
 
-![Vendas por ano](../images/11_vendas_por_ano_publicacao_linha.png)
+![Vendas por ano](../Images/11_vendas_por_ano_publicacao_linha.png)
 
 > 💡 Volume irregular, com picos isolados em vez de tendência suave — sucesso associado a títulos específicos, não a uma tendência de mercado.
 
