@@ -163,7 +163,7 @@ plt.show()
 
 ### 4.2 Distribuição por gênero
 
-```python
+```python 
 df["genre"].value_counts().plot(kind="bar")
 ```
 
