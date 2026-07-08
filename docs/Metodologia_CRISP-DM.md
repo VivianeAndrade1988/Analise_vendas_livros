@@ -41,7 +41,7 @@ Este projeto foi conduzido seguindo o **CRISP-DM** (Cross Industry Standard Proc
 
 **Principal achado desta fase:** identificação de um valor de `Publishing Year` inconsistente (**-560**), que seria tratado na fase seguinte. Também foram identificados nulos em `Book Name` (23 registros) e `language_code` (53 registros).
 
-📎 Detalhes completos em [`Dicionario_de_Dados.md`](Dicionario_de_Dados.md).
+📎 Detalhes completos em [`Dicionario_de_Dados.md`](Dicionário_Dados.md).
 
 ---
 
@@ -74,7 +74,7 @@ Não foi construído um modelo preditivo (ex.: regressão) nesta iteração — 
 - **Relação entre variáveis contínuas:** gráficos de dispersão e matriz de correlação
 - **Teste de hipótese:** teste t de Student para comparar médias entre grupos independentes
 
-📎 Detalhes estatísticos completos em [`Estatistica_Aplicada.md`](Estatistica_Aplicada.md).
+📎 Detalhes estatísticos completos em [`Estatística_Aplicada.md`](Estatística_Aplicada.md).
 
 ---
 
@@ -94,7 +94,7 @@ Não foi construído um modelo preditivo (ex.: regressão) nesta iteração — 
 
 **Objetivo:** transformar os achados em recomendações práticas e definir próximos passos.
 
-📎 Recomendações completas em [`Insights_de_Negocio.md`](Insights_de_Negocio.md).
+📎 Recomendações completas em [`Insights_de_Negocio.md`](Insights_de_Negócios.md).
 
 **Próximos passos sugeridos:**
 - Construir modelo preditivo combinando múltiplas variáveis
