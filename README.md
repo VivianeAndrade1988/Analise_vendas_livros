@@ -68,7 +68,6 @@ Principais variáveis analisadas:
 - Seaborn
 - SciPy
 - Jupyter Notebook
-- Git
 - GitHub
 
 ---
@@ -107,19 +106,13 @@ book-sales-analysis-crisp-dm
 │
 ├── notebooks/
 │
-├── src/
-│
 ├── images/
 │
 ├── reports/
 │
-├── presentation/
-│
 ├── docs/
 │
-├── README.md
-│
-└── requirements.txt
+└── README.md
 ```
 
 ---
@@ -228,34 +221,6 @@ O projeto contém diversos gráficos, incluindo:
 
 ---
 
-# 🚀 Como Executar
-
-Clone o repositório:
-
-```bash
-git clone https://github.com/seuusuario/book-sales-analysis-crisp-dm.git
-```
-
-Acesse a pasta:
-
-```bash
-cd book-sales-analysis-crisp-dm
-```
-
-Instale as dependências:
-
-```bash
-pip install -r requirements.txt
-```
-
-Abra os notebooks:
-
-```bash
-jupyter notebook
-```
-
----
-
 # 📄 Documentação
 
 A documentação completa está disponível na pasta **docs/**, incluindo:
@@ -270,12 +235,6 @@ A documentação completa está disponível na pasta **docs/**, incluindo:
 # 📑 Relatório Técnico
 
 O relatório completo do projeto encontra-se na pasta **reports/**.
-
----
-
-# 📊 Apresentação
-
-A apresentação em formato de carrossel para LinkedIn está disponível na pasta **presentation/**.
 
 ---
 
